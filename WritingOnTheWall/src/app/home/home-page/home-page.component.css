@@ -14,3 +14,10 @@ right: 0;
 .bg-color {
   background-color: #540B0E;
 }
+
+.logo-title{
+  color: #E09F3E;
+  font-family: "Nerko One", serif;
+  text-shadow: 0 0 3px #000000;
+  font-size: 72px;
+}
