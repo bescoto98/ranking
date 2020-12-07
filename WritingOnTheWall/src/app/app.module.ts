@@ -11,17 +11,23 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { NavbarModule } from './navbar/navbar.module';
 import { HomeModule } from './home/home.module';
+import { UserModule } from './user/user.module';
+import { ListViewComponent } from './shared/list-view/list-view.component';
+import { RankingViewComponent } from './shared/ranking-view/ranking-view.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListViewComponent,
+    RankingViewComponent
   ],
   imports: [
     BrowserModule,
     NavbarModule,
     NgbModule,
     HomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
