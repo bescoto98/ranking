@@ -14,6 +14,8 @@ import { HomeModule } from './home/home.module';
 import { UserModule } from './user/user.module';
 import { ListViewComponent } from './shared/list-view/list-view.component';
 import { RankingViewComponent } from './shared/ranking-view/ranking-view.component';
+import { GlobalListModule } from './global-list/global-list.module';
+import { GlobalRankModule } from './global-rank/global-rank.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { RankingViewComponent } from './shared/ranking-view/ranking-view.compone
     NgbModule,
     HomeModule,
     AppRoutingModule,
-    UserModule
+    UserModule,
+    GlobalListModule,
+    GlobalRankModule
   ],
   providers: [],
   bootstrap: [AppComponent]

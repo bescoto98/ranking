@@ -10,10 +10,10 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   links = [
-    { "display": true, "name":"Register", "value": 1},
-    { "display": true, "name":"Login", "value": 2},
-    { "display": true, "name":"Favorite Lists", "value": 3},
-    { "display": true, "name":"Rankings", "value": 4}
+    { "display": true, "name":"Register", "location":"register", "value": 1},
+    { "display": true, "name":"Login", "location":"login", "value": 2},
+    { "display": true, "name":"Favorite Lists", "location":"toplists", "value": 3},
+    { "display": true, "name":"Rankings", "location":"rankings", "value": 4}
   ];
 
   constructor(private router: Router) { }

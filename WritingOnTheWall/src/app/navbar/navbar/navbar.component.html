@@ -16,7 +16,8 @@
   </div> -->
   <div *ngFor="let link of links">
     <div *ngIf="link.display">
-      <button (click)="navigateTo(link.value)" class="btn btn-yellow btn-lg mr-2">{{link.name}}</button>
+      <button [routerLink]="['/',link.location]" class="btn btn-yellow btn-lg mr-2">{{link.name}}</button>
+      <!-- <a [routerLink]="['/',link.location]" class="btn btn-yellow btn-lg mr-2">{{link.name}}</a> -->
     </div>
   </div>
 </nav>
