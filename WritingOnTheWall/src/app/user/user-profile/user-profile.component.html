@@ -44,28 +44,52 @@
     </div>
   </div>
 
-  <!-- top ten -->
   <div class="row">
-    <div class="card">
-      <div class="card-header">
-        <h2 class="card-title">View my top ten pieces of media</h2>
-      </div>
-      <div class="card-body" *ngIf="showList">
-        <div>
-          <ol>
-            <ng-container *ngFor="let position of topten">
-              <li>
-                <blockquote class="blockquote">
-                  <p><em>{{position.media}}</em></p>
-                  <footer class="blockquote-footer">"{{position.opinion}}"</footer>
-                </blockquote>
-              </li>
-            </ng-container>
-          </ol>
+    <!-- top ten -->
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">View my top ten pieces of media</h2>
+        </div>
+        <div class="card-body" *ngIf="showList">
+          <div>
+            <ol>
+              <ng-container *ngFor="let position of topten">
+                <li>
+                  <blockquote class="blockquote">
+                    <p><em>{{position.media}}</em></p>
+                    <footer class="blockquote-footer">"{{position.opinion}}"</footer>
+                  </blockquote>
+                </li>
+              </ng-container>
+            </ol>
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <button class="btn btn-yellow mr-2" (click)="toggleList()">{{listButton}}</button>
         </div>
       </div>
-      <div class="card-footer text-center">
-        <button class="btn btn-yellow mr-2" (click)="toggleList()">{{listButton}}</button>
+    </div>
+
+    <!-- lists -->
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">My Lists</h2>
+        </div>
+        <div class="card-body">
+          <div *ngFor="let list of fakeLists">
+            <div class="media border-bottom">
+              <img class="small-icon mr-3" src="assets/tv.png">
+              <img class="small-icon mr-3" src="assets/book.png">
+              <img class="small-icon mr-3" src="assets/movie.png">
+              <div class="media-body">
+                <h3>{{list.title}}</h3>
+                <p>{{list.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
