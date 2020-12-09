@@ -1,0 +1,14 @@
+.small-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-yellow {
+  background-color: #E09F3E !important;
+}
+.btn-yellow:hover,
+.btn-yellow:active,
+.btn-yellow:visited,
+.btn-yellow:focus {
+  background-color: #FFF3B0 !important;
+}

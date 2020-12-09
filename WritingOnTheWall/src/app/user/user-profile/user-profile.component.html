@@ -1,1 +1,73 @@
-<p>user-profile works!</p>
+<div class="container">
+  <div class="row m-2">
+    <!-- user card -->
+    <div class="col">
+      <!-- <img src="assets/movie.png" class="small-icon" alt="">
+      <p>@username</p>
+      <p>nickname</p>
+      <p>My favorite x is....</p> -->
+      <div class="media bg-light">
+        <img class="small-icon mr-3" src="assets/movie.png">
+        <div class="media-body">
+          <h5>@username</h5>
+          <h5>nickname</h5>
+          <h5>My favorite x is....</h5>
+        </div>
+      </div>
+    </div>
+    <!-- reviews -->
+    <div class="col">
+      <div class="card bg-light">
+        <div class="card-header">
+          <h3>My Reviews</h3>
+        </div>
+        <div class="card-body">
+          <div *ngFor="let review of reviews">
+            <ul class="list-unstyled border-bottom">
+              <li class="media">
+                <img class="small-icon mr-3" src="assets/movie.png">
+                <div class="media-body">
+                  <blockquote class="blockquote">
+                    <p><em>"{{review.opinion}}"</em></p>
+                    <footer class="blockquote-footer">review for {{review.media}}</footer>
+                  </blockquote>
+                  <div class="row m-2">
+                    <button class="btn btn-outline-success mr-2"><img class="small-icon mr-1" src="assets/heart.png"><strong>{{review.agree}}</strong></button>
+                    <button class="btn btn-outline-danger mr-2"><img class="small-icon mr-1" src="assets/stop.png"><strong>{{review.disagree}}</strong></button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- top ten -->
+  <div class="row">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">View my top ten pieces of media</h2>
+      </div>
+      <div class="card-body" *ngIf="showList">
+        <div>
+          <ol>
+            <ng-container *ngFor="let position of topten">
+              <li>
+                <blockquote class="blockquote">
+                  <p><em>{{position.media}}</em></p>
+                  <footer class="blockquote-footer">"{{position.opinion}}"</footer>
+                </blockquote>
+              </li>
+            </ng-container>
+          </ol>
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <button class="btn btn-yellow mr-2" (click)="toggleList()">{{listButton}}</button>
+      </div>
+    </div>
+  </div>
+
+</div>
