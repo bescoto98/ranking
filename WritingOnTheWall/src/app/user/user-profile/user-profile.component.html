@@ -71,17 +71,15 @@
 
     <!-- lists -->
     <div class="col">
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">My Lists</h2>
-        </div>
-        <div class="card-body">
+      <div class="m-2 border rounded border-yellow p-2">
+        <h1 class="nerko-font-plain text-white text-center">Featured Lists</h1>
+        <div>
           <div *ngFor="let list of fakeLists">
-            <div class="media border-bottom">
+            <div class="border rounded border-yellow bg-light p-2 m-2">
               <img class="small-icon mr-3" src="assets/tv.png">
               <img class="small-icon mr-3" src="assets/book.png">
               <img class="small-icon mr-3" src="assets/movie.png">
-              <div class="media-body">
+              <div>
                 <h3>{{list.title}}</h3>
                 <p>{{list.description}}</p>
               </div>
