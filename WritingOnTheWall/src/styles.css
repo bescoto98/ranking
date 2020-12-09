@@ -1,2 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
-body { background-color: #540B0E; } 
+body { background-color: #540B0E; }
+
+/* custom yellow buttons */
+
+.btn-yellow {
+  background-color: #E09F3E !important;
+}
+.btn-yellow:hover,
+.btn-yellow:active,
+.btn-yellow:visited,
+.btn-yellow:focus {
+  background-color: #FFF3B0 !important;
+}
+
+.logo-title{
+  color: #E09F3E;
+  font-family: "Nerko One", serif;
+  text-shadow: 0 0 3px #000000;
+  font-size: 72px;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.small-icon {
+  width: 30px;
+  height: 30px;
+}
