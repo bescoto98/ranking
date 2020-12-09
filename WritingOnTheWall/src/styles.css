@@ -13,11 +13,14 @@ body { background-color: #540B0E; }
   background-color: #FFF3B0 !important;
 }
 
-.logo-title{
+.nerko-font{
   color: #E09F3E;
   font-family: "Nerko One", serif;
   text-shadow: 0 0 3px #000000;
-  font-size: 72px;
+}
+
+.nerko-font-plain{
+  font-family: "Nerko One", serif;
 }
 
 .w-60 {
@@ -27,4 +30,13 @@ body { background-color: #540B0E; }
 .small-icon {
   width: 30px;
   height: 30px;
+}
+
+.large-icon {
+  width: 150px;
+  height: 150px;
+}
+
+.border-yellow {
+  border-color: #E09F3E !important;
 }

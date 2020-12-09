@@ -1,19 +1,42 @@
 <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap&effect=neon" rel="stylesheet">
 <div class="container text-center">
   <div class="m-3 w-50 text-center mx-auto">
-    <h1 class="font-effect-neon logo-title">Register</h1>
+    <h1 class="font-effect-neon nerko-font" style="font-size: 72px;">Register</h1>
   </div>
 
-  <h4 class="text-light"><strong>To start, enter an email and password:</strong></h4>
+  <div *ngIf="index==1">
+    <h3 class="nerko-font"><strong>To start, enter an email and password</strong></h3>
 
-  <div class="input-group mb-3 w-50 mx-auto">
-    <input type="text" class="form-control">
-    <div class="input-group-prepend">
-      <span class="input-group-text">@</span>
+    <div class="input-group mb-3 w-50 mx-auto">
+      <input type="text" class="form-control">
+      <div class="input-group-prepend">
+        <span class="input-group-text">@</span>
+      </div>
+      <input type="text" class="form-control">
     </div>
-    <input type="text" class="form-control">
+    <div class="input-group mb-3 w-50 mx-auto">
+      <input type="password" class="form-control">
+    </div>
   </div>
-  <div class="input-group mb-3 w-50 mx-auto">
-    <input type="password" class="form-control">
+
+  <div *ngIf="index==2">
+    <h3 class="nerko-font"><strong>Enter a username</strong></h3>
+    <h4 class="nerko-font">username can contain numbers & dashes but no special characters pwease &lt;3</h4>
+    <input type="text" class="form-control w-50 mx-auto">
+    <h4 class="nerko-font">(Don't worry, you can change it later)</h4>
   </div>
+
+  <div *ngIf="index==3">
+    <h3 class="nerko-font"><strong>Finally, add a nickname</strong></h3>
+    <input type="text" class="form-control w-50 mx-auto">
+    <div class="m-2">
+      <input type="checkbox" data-toggle="toggle" id="nonickname" class="mr-1">
+      <label for="nonickname" class="text-white" style="font-size: 18px;">I would prefer not to</label>
+    </div>
+  </div>
+
+  <div *ngIf="index==4">
+    <h3 class="nerko-font"><strong>You're all set! Go ahead and log in, king</strong></h3>
+  </div>
+  <button class="btn btn-yellow m-2" (click)="moveOn()" *ngIf="index!=4">Continue</button>
 </div>

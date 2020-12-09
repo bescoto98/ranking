@@ -6,24 +6,24 @@
       <p>@username</p>
       <p>nickname</p>
       <p>My favorite x is....</p> -->
-      <div class="media bg-light">
-        <img class="small-icon mr-3" src="assets/movie.png">
+      <div class="media m-3">
+        <img class="large-icon mr-3" src="assets/user_icon.png">
         <div class="media-body">
-          <h5>@username</h5>
-          <h5>nickname</h5>
-          <h5>My favorite x is....</h5>
+          <h3 class="nerko-font" >@optimusprimesleftarm
+          <br>Danny</h3>
         </div>
       </div>
+      <h1 class="nerko-font border-bottom">About me...</h1>
+      <h5 class="text-white">I'm weird. I'm a weirdo. I don't fit in and I don't want to fit in. Have you ever seen me without this stupid hat on? That's weird.</h5>
+
     </div>
     <!-- reviews -->
     <div class="col">
-      <div class="card bg-light">
-        <div class="card-header">
-          <h3>My Reviews</h3>
-        </div>
-        <div class="card-body">
+      <div class="m-2 border rounded border-yellow p-2">
+        <h1 class="nerko-font-plain text-white text-center">My Reviews</h1>
+        <div class="p-2">
           <div *ngFor="let review of reviews">
-            <ul class="list-unstyled border-bottom">
+            <ul class="list-unstyled border rounded border-yellow bg-light p-2">
               <li class="media">
                 <img class="small-icon mr-3" src="assets/movie.png">
                 <div class="media-body">
@@ -31,9 +31,9 @@
                     <p><em>"{{review.opinion}}"</em></p>
                     <footer class="blockquote-footer">review for {{review.media}}</footer>
                   </blockquote>
-                  <div class="row m-2">
-                    <button class="btn btn-outline-success mr-2"><img class="small-icon mr-1" src="assets/heart.png"><strong>{{review.agree}}</strong></button>
-                    <button class="btn btn-outline-danger mr-2"><img class="small-icon mr-1" src="assets/stop.png"><strong>{{review.disagree}}</strong></button>
+                  <div class="row m-2 justify-content-end">
+                    <button class="btn btn-success mr-2"><img class="small-icon mr-1" src="assets/heart.png"><strong>{{review.agree}}</strong></button>
+                    <button class="btn btn-danger mr-2"><img class="small-icon mr-1" src="assets/stop.png"><strong>{{review.disagree}}</strong></button>
                   </div>
                 </div>
               </li>
@@ -47,15 +47,13 @@
   <div class="row">
     <!-- top ten -->
     <div class="col">
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">View my top ten pieces of media</h2>
-        </div>
-        <div class="card-body" *ngIf="showList">
+      <div class="m-2 border rounded border-yellow p-2">
+        <h1 class="nerko-font-plain text-white text-center">My top 10</h1>
+        <div *ngIf="showList" class="border rounded border-yellow bg-light p-2">
           <div>
             <ol>
               <ng-container *ngFor="let position of topten">
-                <li>
+                <li class="border-bottom">
                   <blockquote class="blockquote">
                     <p><em>{{position.media}}</em></p>
                     <footer class="blockquote-footer">"{{position.opinion}}"</footer>
