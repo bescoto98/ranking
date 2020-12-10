@@ -12,16 +12,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavbarModule } from './navbar/navbar.module';
 import { HomeModule } from './home/home.module';
 import { UserModule } from './user/user.module';
-import { ListViewComponent } from './shared/list-view/list-view.component';
-import { RankingViewComponent } from './shared/ranking-view/ranking-view.component';
 import { GlobalListModule } from './global-list/global-list.module';
 import { GlobalRankModule } from './global-rank/global-rank.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ListViewComponent,
-    RankingViewComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

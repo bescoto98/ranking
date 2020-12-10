@@ -7,13 +7,15 @@ import { UserRootComponent } from './user-root/user-root.component';
 
 import { NavbarModule } from '@navbar/navbar.module';
 
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [UserProfileComponent, UserRootComponent],
   imports: [
     CommonModule,
     UserRoutingModule,
-    NavbarModule
+    NavbarModule,
+    SharedModule
   ]
 })
 export class UserModule { }

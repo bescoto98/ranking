@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   links = [
     { "display": true, "name":"Register", "location":"register", "value": 1},
     { "display": true, "name":"Login", "location":"login", "value": 2},
-    { "display": true, "name":"Favorite Lists", "location":"toplists", "value": 3},
+    { "display": true, "name":"Favorite Lists", "location":"lists", "value": 3},
     { "display": true, "name":"Rankings", "location":"rankings", "value": 4}
   ];
 

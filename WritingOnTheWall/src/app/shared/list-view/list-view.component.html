@@ -1,1 +1,24 @@
-<p>list-view works!</p>
+<div class="m-2 border rounded border-yellow p-2">
+  <h1 class="nerko-font-plain text-white text-center">Featured Lists</h1>
+  <div class="border rounded border-yellow bg-light p-2 m-2"  *ngFor="let list of fakeLists">
+    <!-- <div *ngFor="let list of fakeLists"> -->
+      <!-- <div> -->
+        <div class="row m-2">
+        <img class="small-icon mr-3" src="assets/tv.png">
+        <img class="small-icon mr-3" src="assets/book.png">
+        <img class="small-icon mr-3" src="assets/movie.png">
+        </div>
+
+        <div class="row m-2 border-bottom">
+          <h3 class="nerko-font-plain">{{list.title}}</h3>
+        </div>
+        <div class="row m-2">
+          <p>{{list.description}}</p>
+        </div>
+        <div class="row justify-content-center">
+          <button class="btn btn-yellow">See list</button>
+        </div>
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</div>

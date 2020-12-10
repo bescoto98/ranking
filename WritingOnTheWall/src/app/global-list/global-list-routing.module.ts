@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { GlobalListRootComponent } from './global-list-root/global-list-root.component';
+import { GlobalListComponent } from './global-list/global-list.component';
 
 const routes: Routes = [
   {
-    path: 'toplists', component: GlobalListRootComponent
+    path: 'lists', component: GlobalListRootComponent,
+    children: [
+      { path: '', component: GlobalListComponent }
+    ]
   }
 ];
 

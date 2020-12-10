@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class UserProfileComponent implements OnInit {
 
   showList: boolean = false;
-  listButton: string = "Expand list";
+  listButton: string = "Expand";
 
   reviews = [
       { "media":"Harry Potter" , "opinion":"this sucked", "agree":54, "disagree":2 },
@@ -42,10 +42,10 @@ export class UserProfileComponent implements OnInit {
     this.showList = !this.showList;
 
     if(this.showList){
-      this.listButton = "Collapse list";
+      this.listButton = "Collapse";
     }
     else{
-      this.listButton = "Expand list";
+      this.listButton = "Expand";
     }
   }
 
