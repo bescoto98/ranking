@@ -1,187 +1,44 @@
-<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap&effect=neon" rel="stylesheet">
-
-<div class="container p-2">
-
+<div class="container">
   <!-- page card -->
   <div class="m-3 w-50 text-center mx-auto">
     <h1 class="font-effect-neon nerko-font" style="font-size: 72px;">Writing on the wall</h1>
   </div>
-  <!-- latest activity -->
-  <div class="card float-right m-1">
-    <h4 class="card-header m-2 p-2 text-center">Latest Activity</h4>
 
-    <div class="card-body">
-    <table class="table m-2">
-      <tbody>
+  <div class="row bg-light m-2 p-2">
+    <div class="col-md-4 bg-light border-right">
+      <h3 class="nerko-font-plain">Make your opinion everyone else's problem</h3>
+      <p>
+        According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway. Because bees don’t care what humans think is impossible.” SEQ. 75 - “INTRO TO BARRY” INT. BENSON HOUSE - DAY ANGLE ON: Sneakers on the ground. Camera PANS UP to reveal BARRY BENSON’S BEDROOM ANGLE ON: Barry’s hand flipping through different sweaters in his closet. BARRY Yellow black, yellow black, yellow black, yellow black, yellow black, yellow black...oohh, black and yellow...
+      </p>
+    </div>
 
-        <!-- temporarily hardcoding some data -->
-        <tr>
-          <td><img src="assets/gain.png" class="small-icon"></td>
-          <td><img src="assets/movie.png" class="small-icon"></td>
-          <td>Dragonheart (1996)</td>
-        </tr>
-        <tr>
-          <td><img src="assets/loss.png" class="small-icon"></td>
-          <td><img src="assets/book.png" class="small-icon"></td>
-          <td>Harry Potter (idk)</td>
-        </tr>
-        <tr>
-          <td><img src="assets/loss.png" class="small-icon"></td>
-          <td><img src="assets/tv.png" class="small-icon"></td>
-          <td>Supernatural (2005)</td>
-        </tr>
-        <!-- end data -->
 
-      </tbody>
-    </table>
+    <div class="col-md-8 bg-light text-center">
+      <h1 class="nerko-font-plain pt-5">
+        It's simple. Browse through thousands of pieces of media. Make an account. And start changing people's minds, or threaten to fight them i dont care i'm not your mother</h1>
+        <button class="btn btn-yellow">Hell yeah! <br>Register me Right Now! ➡</button>
     </div>
   </div>
-  <!-- end latest activity -->
 
-  <!-- top movies -->
-  <div class="card w-60 mb-3">
-    <div class="card-header">
-      <img src="assets/movie.png" class="d-inline-block align-top mr-2 small-icon">
-      <h5 class="d-inline-block">Crowd Favorite Films</h5>
+  <div class="row">
+    <div class="col-md-8 border-right text-center">
+      <h2 class="nerko-font text-light">TOP 5</h2>
+      <div class="row nerko-font mr-4 justify-content-center">
+        <h3 class="mr-3"
+        [ngClass]="{ 'border-bottom border-light text-light':showFilms}" (click)="switchTabs(true, false, false)">Movies</h3>
+
+        <h3 class="mr-3"
+        [ngClass]="{ 'border-bottom border-light text-light':showBooks}"
+        (click)="switchTabs(false, true, false)">Books</h3>
+
+        <h3 class="mr-3"
+        [ngClass]="{ 'border-bottom border-light text-light':showTv}"
+        (click)="switchTabs(false, false, true)">TV Shows</h3>
+      </div>
+
     </div>
-
-    <div class="card-body bg-light">
-      <ul class="list-group">
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">1. Dragonheart (1996)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">2. King Arthur (2003)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">3. The Lego Movie (2015)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">4. Into the Spiderverse (2018)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">5. Bumblebee (2018)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-      </ul>
+    <div class="col-md-4 bg-light">
+      <h3>latest news</h3>
     </div>
-
-  </div>
-
-  <!-- top tv shows -->
-  <div class="card w-60 mb-3">
-    <div class="card-header">
-      <img src="assets/tv.png" class="d-inline-block align-top mr-2 small-icon">
-      <h5 class="d-inline-block">Binge Worthy TV</h5>
-    </div>
-
-    <div class="card-body bg-light">
-      <ul class="list-group">
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">1. Avengers: Earth's Mightiest Heroes (2013)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">2. Cursed (2020)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">3. The 100 (2015)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">4. Arrow (2005)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">5. The Flash (2010)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- top books -->
-  <div class="card w-60">
-    <div class="card-header">
-      <img src="assets/book.png" class="d-inline-block align-top mr-2 small-icon">
-      <h5 class="d-inline-block">For Those Who Are Literate</h5>
-    </div>
-
-    <div class="card-body bg-light">
-      <ul class="list-group">
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">1. Webster's Dictionary (2020)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">2. Lord of the Rings (old)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">3. The Hunger Games (2010)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">4. Twilight (2008)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-        <li class="list-group-item">
-
-          <!-- temporary hard coded data -->
-          <p class="d-inline-block">5. New Moon (2009)</p>
-          <a href="#" class="ml-2">See reviews</a>
-
-        </li>
-      </ul>
-    </div>
-
   </div>
 </div>

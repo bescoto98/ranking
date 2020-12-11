@@ -32,6 +32,11 @@ body { background-color: #540B0E; }
   height: 30px;
 }
 
+.med-icon{
+  width:70px;
+  height: 100px;
+}
+
 .large-icon {
   width: 150px;
   height: 150px;
@@ -39,4 +44,12 @@ body { background-color: #540B0E; }
 
 .border-yellow {
   border-color: #E09F3E !important;
+}
+
+.border-5{
+  border-width:5px !important;
+}
+
+.dissolve-grad{
+  background: linear-gradient(0deg, rgb(224, 159, 62, 1), rgba(255, 255, 255, 0));
 }

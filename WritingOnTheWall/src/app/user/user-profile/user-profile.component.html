@@ -32,8 +32,8 @@
                     <footer class="blockquote-footer">review for {{review.media}}</footer>
                   </blockquote>
                   <div class="row m-2 justify-content-end">
-                    <button class="btn btn-success mr-2"><img class="small-icon mr-1" src="assets/heart.png"><strong>{{review.agree}}</strong></button>
-                    <button class="btn btn-danger mr-2"><img class="small-icon mr-1" src="assets/stop.png"><strong>{{review.disagree}}</strong></button>
+                    <button class="btn btn-dark mr-2"><img class="small-icon mr-1" src="assets/heart.png"><strong>{{review.agree}}</strong></button>
+                    <button class="btn btn-dark mr-2"><img class="small-icon mr-1" src="assets/stop.png"><strong>{{review.disagree}}</strong></button>
                   </div>
                 </div>
               </li>
@@ -71,7 +71,10 @@
 
     <!-- lists -->
     <div class="col">
+      <div class="m-2 border rounded border-yellow p-2">
+        <h1 class="nerko-font-plain text-white text-center">Featured Lists</h1>
       <app-list-view></app-list-view>
+      </div>
     </div>
   </div>
 
